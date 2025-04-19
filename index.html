@@ -1,1 +1,348 @@
-Here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. [Your Name] - Medical Imaging AI Researcher</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #1abc9c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: white;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        section {
+            margin: 4rem 0;
+            scroll-margin-top: 2rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .education, .publications {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .education-item, .publication-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .year {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        nav {
+            background-color: white;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dr. [Your Name]</h1>
+            <p>Medical Imaging AI Researcher</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="about" class="profile">
+            <img src="/api/placeholder/200/200" alt="Dr. [Your Name]" class="profile-img">
+            <div class="profile-text">
+                <h2>About Me</h2>
+                <p>I am a Medical Imaging AI Researcher with expertise in developing advanced machine learning techniques for medical image analysis, diagnosis, and treatment planning. My research focuses on improving healthcare outcomes through innovative AI solutions.</p>
+                <p>Currently, I am [Your Current Position] at [Your Institution], where I lead research initiatives in [Your Specific Research Areas].</p>
+                <p>My work combines deep learning, computer vision, and medical knowledge to create AI tools that assist healthcare professionals in making more accurate and efficient diagnoses.</p>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Focus</h2>
+            <p>My research spans several key areas in medical imaging AI:</p>
+            <ul>
+                <li><strong>Deep Learning for Image Segmentation:</strong> Developing neural network architectures for precise organ and lesion segmentation.</li>
+                <li><strong>Multimodal Analysis:</strong> Integrating information from multiple imaging modalities (MRI, CT, PET) for comprehensive diagnosis.</li>
+                <li><strong>Explainable AI:</strong> Creating interpretable AI systems that provide transparency in decision-making processes.</li>
+                <li><strong>Low-resource Learning:</strong> Designing algorithms that perform well with limited labeled data, addressing the challenge of data scarcity in medical imaging.</li>
+                <li><strong>Clinical Translation:</strong> Bridging the gap between AI research and clinical implementation through collaborative research with healthcare providers.</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 1" class="project-img">
+                    <div class="project-content">
+                        <h3>AI-Driven Brain Tumor Segmentation</h3>
+                        <p>Developed a novel deep learning architecture for automatic segmentation of brain tumors from multimodal MRI scans, achieving state-of-the-art performance with a Dice score of 0.91.</p>
+                        <p>This work enables more precise tumor volume measurement for treatment planning and monitoring.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 2" class="project-img">
+                    <div class="project-content">
+                        <h3>Lung Nodule Detection and Classification</h3>
+                        <p>Created an end-to-end system for detecting and classifying pulmonary nodules in CT scans, reducing false positive rates by 30% compared to previous methods.</p>
+                        <p>The system has been deployed in a clinical trial with [Partner Hospital] to assist radiologists in early lung cancer screening.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 3" class="project-img">
+                    <div class="project-content">
+                        <h3>Federated Learning for Medical Imaging</h3>
+                        <p>Pioneered a privacy-preserving federated learning framework that enables multiple healthcare institutions to collaboratively train AI models without sharing sensitive patient data.</p>
+                        <p>This approach addresses key regulatory and privacy concerns in healthcare AI deployment.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 4" class="project-img">
+                    <div class="project-content">
+                        <h3>Multimodal Fusion for Alzheimer's Diagnosis</h3>
+                        <p>Developed a multimodal deep learning approach that combines structural MRI, FDG-PET, and clinical data for early diagnosis of Alzheimer's disease.</p>
+                        <p>The model achieved 94% accuracy in identifying patients with mild cognitive impairment who progressed to Alzheimer's within 3 years.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 5" class="project-img">
+                    <div class="project-content">
+                        <h3>Explainable AI for Radiology Reports</h3>
+                        <p>Created an explainable AI system that generates human-readable justifications for its findings when analyzing chest X-rays, increasing radiologist trust and adoption.</p>
+                        <p>This work addresses the "black box" nature of AI diagnostics and provides transparency in clinical decision support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Education & Training</h2>
+
+            <div class="education-item">
+                <p class="year">20XX - 20XX</p>
+                <h3>Ph.D. in [Your Field]</h3>
+                <p>[Your University]</p>
+                <p>Thesis: "[Your Thesis Title]"</p>
+                <p>Advisor: Prof. [Advisor Name]</p>
+            </div>
+
+            <div class="education-item">
+                <p class="year">20XX - 20XX</p>
+                <h3>M.S. in [Your Field]</h3>
+                <p>[Your University]</p>
+            </div>
+
+            <div class="education-item">
+                <p class="year">20XX - 20XX</p>
+                <h3>B.S. in [Your Field]</h3>
+                <p>[Your University]</p>
+            </div>
+
+            <h3>Additional Training</h3>
+            <div class="education-item">
+                <p class="year">20XX</p>
+                <h3>Research Fellowship</h3>
+                <p>[Institution Name]</p>
+                <p>Focus: [Research Focus]</p>
+            </div>
+        </section>
+
+        <section id="publications" class="publications">
+            <h2>Selected Publications</h2>
+
+            <div class="publication-item">
+                <p class="year">20XX</p>
+                <p><strong>[Author List including You]</strong>. "[Publication Title]". <em>Journal Name</em>, Volume(Issue), Pages.</p>
+                <p>DOI: [DOI Number]</p>
+            </div>
+
+            <div class="publication-item">
+                <p class="year">20XX</p>
+                <p><strong>[Author List including You]</strong>. "[Publication Title]". <em>Conference Name</em>, Pages.</p>
+                <p>DOI: [DOI Number]</p>
+            </div>
+
+            <div class="publication-item">
+                <p class="year">20XX</p>
+                <p><strong>[Author List including You]</strong>. "[Publication Title]". <em>Journal Name</em>, Volume(Issue), Pages.</p>
+                <p>DOI: [DOI Number]</p>
+            </div>
+
+            <a href="#">View all publications →</a>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: your.email@institution.edu</p>
+                <p>Office: [Building Name, Room Number]</p>
+                <p>Twitter: @[YourHandle]</p>
+            </div>
+            <p style="margin-top: 2rem;">[Your Institution Name]<br>[Department/Lab Name]<br>[Address]</p>
+        </div>
+    </footer>
+</body>
+</html>
