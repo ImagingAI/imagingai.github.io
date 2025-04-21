@@ -4,426 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Craig Jones - Medical Imaging AI Researcher</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #1abc9c;
-            --text-color: #333;
-            --light-bg: #f9f9f9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: white;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin: 2rem 0 1rem;
-            color: var(--primary-color);
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            margin: 1.5rem 0 0.5rem;
-            color: var(--secondary-color);
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--secondary-color);
-        }
-
-        .profile-text {
-            flex: 1;
-        }
-
-        section {
-            margin: 4rem 0;
-            scroll-margin-top: 2rem;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: var(--light-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            /* object-fit: cover;*/
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .education, .publications {
-            background-color: var(--light-bg);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .education-item, .publication-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .year {
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer a {
-            color: white;
-        }
-
-        nav {
-            background-color: white;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 1rem 0;
-        }
-
-        nav li {
-            margin: 0 1rem;
-        }
-
-        nav a {
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .highlight {
-            color: var(--accent-color);
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="bg-primary-custom text-white text-center py-5">
         <div class="container">
             <h1>Dr. Craig Jones</h1>
-            <p style="font-size:1.5em;">Medical Imaging AI Researcher</p>
+            <p class="fs-4">Medical Imaging AI Researcher</p>
             <p>craig@imagingai.org</p>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#teaching">Teaching/Advising</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teaching" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Teaching/Advising</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main class="container">
-        <section id="about" class="profile">
-            <img src="images/ckj.png" alt="Dr. Craig Jones" class="profile-img">
-            <div class="profile-text">
-                <h2>About Me</h2>
-                <p>I am a Medical Imaging AI Researcher with expertise in developing advanced machine learning techniques for medical image analysis, diagnosis, and treatment planning. My research focuses on improving healthcare outcomes through innovative AI solutions.</p>
-		<p>Currently, I am currently the Director of the IAMAI Center at NovaGen Research, and have my own Imaging Lab too.</p> 
-		<p>As well, I am an <a href="https://engineering.jhu.edu/faculty/craig-jones/">Assistant Research Professor</a> in <a href=https://www.cs.jhu.edu/">Computer Science</a> at Johns Hopkins with cross appointments in <a href="https://www.hopkinsmedicine.org/wilmer/">Ophthalmology</a>, <a href="https://www.hopkinsmedicine.org/radiology">Radiology</a>, and <a href="https://www.hopkinsmedicine.org/gastroenterology-hepatology">Gastroenterology</a>.  I am a Co-Director of the <a href="https://rail.jhu.edu">Radiology AI Lab</a>. I have four PhD students and numerous MSc and undergraduate students working on computer science, medical image processing, deep learning, and AI modeling of medical imaging and non-imaging data.</p>
-</p>
-                <p>I integrate deep learning algorithms, computer vision techniques, and specialized medical knowledge to develop AI-assisted diagnostic systems for clinical applications. My computational tools augment medical researchers' capabilities by identifying subtle imaging biomarkers and patterns, enhancing diagnostic precision and workflow efficiency. My approach leverages multimodal medical imaging data through neural networks and transformer architectures, serving as decision support technology rather than replacement for expert clinical judgment.</p>
-            </div>
-        </section>
-
-        <section id="research">
-            <h2>Research Focus</h2>
-            <p>My research spans several key areas in medical imaging AI:</p>
-            <ul style="margin-left: 3em;">
-                <li><strong>Multimodal Analysis:</strong> Integrating information from multiple imaging modalities (MRI, CT, PET) along with EHR records and -omics for comprehensive diagnosis.</li>
-                <li><strong>Longitudinal Prediction:</strong> Developing neural network architectures for disease progression and prediction from multiple arbitrary timepoints of imaging dat (along with other multi-modal data).</li>
-                <li><strong>Uncertainty:</strong> Understanding how uncertainty plays into AI both related to the input (clean labels) and output.</li>
-                <li><strong>Collaborations:</strong>My collaborations with medical researchers is an important aspect of my work as the collaboration and knowledge sharing is what will drive medical AI work.</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects">
-
-                <div class="project-card">
-                    <img src="images/vms.png" alt="Project 1" class="project-img">
-                    <div class="project-content">
-                        <h3>Vascular Malformation Segmentation</h3>
-
-			<p>We are developing a fully automated algorithm to segment Low-Flow Vascular Malformations (LFVMs) on MRI scans as a critical step toward building disease progression and treatment prediction models. The work utilizes retrospective MRI data from 200 subjects with LFVMs in various body regions, employing a modified nnUNet deep learning segmentation model with comprehensive data augmentation techniques.</p>
-			<p>In future work, I plan to expand this segmentation approach to additional body regions and integrate radiomics analysis to build comprehensive prediction models for LFVM treatment outcomes.</p>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <img src="images/ckj.png" alt="Dr. Craig Jones" class="profile-img mb-3">
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/eye3.png" alt="Project 1" class="project-img">
-                    <div class="project-content">
-                        <h3>Active Shape Modeling</h3>
-			<p>My active shape model research develops automated registration methods for ocular structures in CT images using point distribution models that can precisely locate and outline eye components despite image quality variations. This work addresses critical challenges in ophthalmology and radiation therapy treatment planning by providing accurate anatomical structure identification even when abnormalities are present. 
-			<p>Future work will incorporate deep learning for improved feature detection, extend the model to handle pathological deformations, create multi-modal registration frameworks, and develop clinical decision support systems leveraging these models for treatment planning.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="/images/uncertainty2.png" alt="Project 2" class="project-img">
-                    <div class="project-content">
-                        <h3>Aleatoric and Epistemic Uncertainty for AI</h3>
-			<p>Our research tackles the critical challenge of uncertainty quantification in medical image segmentation by developing innovative methods to distinguish between epistemic uncertainty (model limitations) and aleatoric uncertainty (inherent data randomness) in 3D U-Net architectures. We extended the  evidential deep learning and created a framework that generates uncertainty maps alongside segmentations, highlighting areas where AI predictions may be unreliable and requiring human expert attention—a crucial capability for clinical integration.</p>
-			<p>Future work will focus on expanding this framework to other medical imaging applications, integrating model ensembles for improved uncertainty estimation, and developing adaptive systems that can request human intervention based on quantified uncertainty thresholds.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="/images/active-learning.png" alt="Project 3" class="project-img">
-                    <div class="project-content">
-                        <h3>Active Learning in AI</h3>
-			<p>Our work introduces a novel framework for uncertainty quantification in deep learning that mathematically connects evidential learning with Bayesian neural networks through a direct variance parameterization approach. We demonstrate that our method effectively captures both epistemic uncertainty (model uncertainty) and aleatoric uncertainty (data uncertainty) without requiring computationally expensive Monte Carlo sampling at inference time. Extensive experiments on medical image segmentation and classification tasks show that our approach provides more accurate uncertainty estimates while maintaining computational efficiency compared to existing methods. </p>
-			<p>Future work will extend this framework to more complex architectures, explore applications in active learning and out-of-distribution detection, and develop interpretable visualization tools that help clinicians understand model confidence in medical decision-making contexts.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/optho-multi-modal.jpg" alt="Project 4" class="project-img">
-                    <div class="project-content">
-                        <h3>Multimodal Data and Ensemble Machine Learning in AMD</h3>
-			This research develops an ensemble machine learning approach combining multiple algorithms (random forests, gradient boosting, and neural networks) to predict the 6-month conversion risk from intermediate to exudative age-related macular degeneration using multimodal data. The methodology integrates features from optical coherence tomography, fundus photography, and patient demographics through a feature selection process that identifies the most predictive biomarkers across modalities. The ensemble model significantly outperforming individual models and conventional clinical assessments, while maintaining interpretability through feature importance analysis that highlighted novel biomarkers beyond traditional risk factors.
-			<p>The future work will continue to focus on incorporating multi-modal AI for more robust and accurate predictions. I am investigating the uncertainty techniques to provide a more complete picture of predicion and the related uncertainty.<p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="images/elsa.png" alt="Project 5" class="project-img">
-                    <div class="project-content">
-                        <h3>Emergent Language AI for Hierarchical fMRI ICA</h3>
-			<p>In our research, we developed a novel symbolic autoencoder (ELSA) with weak supervision that effectively models the hierarchical organization of brain networks, overcoming the "black box" limitations of traditional flat classifiers. We implemented a generalized hierarchical loss function that ensures both our symbolic sentences and generated images accurately reflect the hierarchical structure of functional brain networks, enabling comprehensive analysis from broad perspectives to granular details.</p>
-			<p>For future work, I plan to extend this approach to dynamic functional connectivity analysis, incorporating temporal dimensions to model how these hierarchical brain networks evolve over time and in response to various cognitive tasks or pathological conditions.</p>
+                    <div class="col-md-8">
+                        <h2 class="section-heading text-primary-custom">About Me</h2>
+                        <p>I am a Medical Imaging AI Researcher with expertise in developing advanced machine learning techniques for medical image analysis, diagnosis, and treatment planning. My research focuses on improving healthcare outcomes through innovative AI solutions.</p>
+                        <p>Currently, I am the Director of the IAMAI Center at NovaGen Research, and have my own Imaging Lab too.</p>
+                        <p>As well, I am an <a href="https://engineering.jhu.edu/faculty/craig-jones/">Assistant Research Professor</a> in <a href="https://www.cs.jhu.edu/">Computer Science</a> at Johns Hopkins with cross appointments in <a href="https://www.hopkinsmedicine.org/wilmer/">Ophthalmology</a>, <a href="https://www.hopkinsmedicine.org/radiology">Radiology</a>, and <a href="https://www.hopkinsmedicine.org/gastroenterology-hepatology">Gastroenterology</a>. I am a Co-Director of the <a href="https://rail.jhu.edu">Radiology AI Lab</a>. I have four PhD students and numerous MSc and undergraduate students working on computer science, medical image processing, deep learning, and AI modeling of medical imaging and non-imaging data.</p>
+                        <p>I integrate deep learning algorithms, computer vision techniques, and specialized medical knowledge to develop AI-assisted diagnostic systems for clinical applications. My computational tools augment medical researchers' capabilities by identifying subtle imaging biomarkers and patterns, enhancing diagnostic precision and workflow efficiency. My approach leverages multimodal medical imaging data through neural networks and transformer architectures, serving as decision support technology rather than replacement for expert clinical judgment.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="teaching" class="education">
-            <h2>Teaching and Scientific Advising</h2>
 
-            <div class="education-item">
-                <h3>Teaching</h3>
-		<p>
-In the Computer Science department, I designed and taught "Seminar Topics in Medical Image Processing" (EN.601.862) for post-graduate students, and taught "Computer Vision" (EN.601.461) to approximately 80 students.  I have taught modules of "Radiology for Engineers" and Deep Learning for Medical IMaging" in Department of Biomedical Engineering, covering MRI and Medical Imaging for post-graduate students.
-		</p>
-            </div>
-
-            <div class="education-item">
-                <h3>Scientific Advising</h3>
-		<p>I serve as a Scientific Advisor for the <a href="https://www.cameramriafrica.org/spark">SPrint AI training for AfRican medical imaging Knowledge translation (SPARK)</a> which is part of <a href="https://www.cameramriafrica.org">CAMERA</a> program to build expertise to enable Africa to use MRI to realize their healthcare needs. I teach several modules in the SPARK program including Medical Image Processing, UNet Segmentation, Deep Learning, and How to Write a Paper.</p>
-            </div>
-
-            <div class="education-item">
-                <h3>Reviewer</h3>
-		<p>Recent conferences and journals I have reviewed for include: British Journal of Ophthalmology; Computer Methods and Programs in Biomedicine; Artificial Intelligence in Medicine; Engineering; JAMA Ophthalmology; PlosOne; Physica Scripta, Ophthalmology Retina; MICCAI.
+        <!-- Research Section -->
+        <section id="research" class="py-5 bg-light-custom">
+            <div class="container">
+                <h2 class="section-heading text-primary-custom">Research Focus</h2>
+                <p>My research spans several key areas in medical imaging AI:</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-light-custom"><strong>Multimodal Analysis:</strong> Integrating information from multiple imaging modalities (MRI, CT, PET) along with EHR records and -omics for comprehensive diagnosis.</li>
+                    <li class="list-group-item bg-light-custom"><strong>Longitudinal Prediction:</strong> Developing neural network architectures for disease progression and prediction from multiple arbitrary timepoints of imaging data (along with other multi-modal data).</li>
+                    <li class="list-group-item bg-light-custom"><strong>Uncertainty:</strong> Understanding how uncertainty plays into AI both related to the input (clean labels) and output.</li>
+                    <li class="list-group-item bg-light-custom"><strong>Collaborations:</strong> My collaborations with medical researchers is an important aspect of my work as the collaboration and knowledge sharing is what will drive medical AI work.</li>
+                </ul>
             </div>
         </section>
-        <section id="education" class="education">
-            <h2>Education & Training</h2>
 
-            <div class="education-item">
-                <h3>Postdoctoral Research Fellowship</h3>
-                <p>F.M. Kirby Center, Kennedy Krieger Institute, Johns Hopkins University -- 2003 - 2006 </p>
-                <p>Focus: My research centered on developing advanced quantitative MRI techniques for neurological applications, particularly focusing on novel contrast mechanisms like amide proton transfer (APT) imaging for brain tumors and magnetization transfer methods for spinal cord assessment. I applied early machine learning approaches to image processing challenges, including automated registration techniques and clustering algorithms for tissue classification, which established the foundation for my later work combining artificial intelligence with medical imaging.</p>
-            </div>
-            <div class="education-item">
-                <h3>Ph.D. in Physics (Medical Biophysics)</h3>
-                <p>University of British Columbia -- 1999 - 2003</p>
-                <p>Thesis: T2 Decay Curve Acquisition and Analysis in MRI: Noise Considerations, Short T2 , and B1 Field Encoding</p>
-                <p>Advisor: Prof. Alex Mackay and San Xang</p>
-            </div>
+        <!-- Projects Section -->
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-primary-custom">Featured Projects</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/vms.png" alt="Vascular Malformation Segmentation" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Vascular Malformation Segmentation</h3>
+                                <p class="card-text">We are developing a fully automated algorithm to segment Low-Flow Vascular Malformations (LFVMs) on MRI scans as a critical step toward building disease progression and treatment prediction models. The work utilizes retrospective MRI data from 200 subjects with LFVMs in various body regions, employing a modified nnUNet deep learning segmentation model with comprehensive data augmentation techniques.</p>
+                                <p class="card-text">In future work, I plan to expand this segmentation approach to additional body regions and integrate radiomics analysis to build comprehensive prediction models for LFVM treatment outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="education-item">
-                <h3>M.S. in Medical Biophysics</h3>
-                <p>University of Western Ontario -- 1994 - 1997</p>
-                <p>Thesis: Quantitative Multi-Component Analysis Using Fast Spin-Echo MRI</p>
-            </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/eye3.png" alt="Active Shape Modeling" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Active Shape Modeling</h3>
+                                <p class="card-text">My active shape model research develops automated registration methods for ocular structures in CT images using point distribution models that can precisely locate and outline eye components despite image quality variations. This work addresses critical challenges in ophthalmology and radiation therapy treatment planning by providing accurate anatomical structure identification even when abnormalities are present.</p>
+                                <p class="card-text">Future work will incorporate deep learning for improved feature detection, extend the model to handle pathological deformations, create multi-modal registration frameworks, and develop clinical decision support systems leveraging these models for treatment planning.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="education-item">
-                <h3>B.Sc. (Honours) in Mathematics and Computing Science (First Class Standing)</h3>
-                <p>Simon Fraser University -- 1988 - 1992</p>
-            </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/uncertainty2.png" alt="Uncertainty in AI" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Aleatoric and Epistemic Uncertainty for AI</h3>
+                                <p class="card-text">Our research tackles the critical challenge of uncertainty quantification in medical image segmentation by developing innovative methods to distinguish between epistemic uncertainty (model limitations) and aleatoric uncertainty (inherent data randomness) in 3D U-Net architectures. We extended the evidential deep learning and created a framework that generates uncertainty maps alongside segmentations, highlighting areas where AI predictions may be unreliable and requiring human expert attention—a crucial capability for clinical integration.</p>
+                                <p class="card-text">Future work will focus on expanding this framework to other medical imaging applications, integrating model ensembles for improved uncertainty estimation, and developing adaptive systems that can request human intervention based on quantified uncertainty thresholds.</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/active-learning.png" alt="Active Learning in AI" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Active Learning in AI</h3>
+                                <p class="card-text">Our work introduces a novel framework for uncertainty quantification in deep learning that mathematically connects evidential learning with Bayesian neural networks through a direct variance parameterization approach. We demonstrate that our method effectively captures both epistemic uncertainty (model uncertainty) and aleatoric uncertainty (data uncertainty) without requiring computationally expensive Monte Carlo sampling at inference time. Extensive experiments on medical image segmentation and classification tasks show that our approach provides more accurate uncertainty estimates while maintaining computational efficiency compared to existing methods.</p>
+                                <p class="card-text">Future work will extend this framework to more complex architectures, explore applications in active learning and out-of-distribution detection, and develop interpretable visualization tools that help clinicians understand model confidence in medical decision-making contexts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/optho-multi-modal.jpg" alt="Multimodal Data in AMD" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Multimodal Data and Ensemble Machine Learning in AMD</h3>
+                                <p class="card-text">This research develops an ensemble machine learning approach combining multiple algorithms (random forests, gradient boosting, and neural networks) to predict the 6-month conversion risk from intermediate to exudative age-related macular degeneration using multimodal data. The methodology integrates features from optical coherence tomography, fundus photography, and patient demographics through a feature selection process that identifies the most predictive biomarkers across modalities. The ensemble model significantly outperforming individual models and conventional clinical assessments, while maintaining interpretability through feature importance analysis that highlighted novel biomarkers beyond traditional risk factors.</p>
+                                <p class="card-text">The future work will continue to focus on incorporating multi-modal AI for more robust and accurate predictions. I am investigating the uncertainty techniques to provide a more complete picture of prediction and the related uncertainty.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card project-card shadow-sm h-100">
+                            <img src="images/elsa.png" alt="Emergent Language AI" class="project-img card-img-top p-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-secondary-custom fs-5">Emergent Language AI for Hierarchical fMRI ICA</h3>
+                                <p class="card-text">In our research, we developed a novel symbolic autoencoder (ELSA) with weak supervision that effectively models the hierarchical organization of brain networks, overcoming the "black box" limitations of traditional flat classifiers. We implemented a generalized hierarchical loss function that ensures both our symbolic sentences and generated images accurately reflect the hierarchical structure of functional brain networks, enabling comprehensive analysis from broad perspectives to granular details.</p>
+                                <p class="card-text">For future work, I plan to extend this approach to dynamic functional connectivity analysis, incorporating temporal dimensions to model how these hierarchical brain networks evolve over time and in response to various cognitive tasks or pathological conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="publications" class="publications">
-            <h2>Selected Publications</h2>
+        <!-- Teaching Section -->
+        <section id="teaching" class="py-5 bg-light-custom">
+            <div class="container">
+                <h2 class="section-heading text-primary-custom">Teaching and Scientific Advising</h2>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">Teaching</h3>
+                        <p>In the Computer Science department, I designed and taught "Seminar Topics in Medical Image Processing" (EN.601.862) for post-graduate students, and taught "Computer Vision" (EN.601.461) to approximately 80 students. I have taught modules of "Radiology for Engineers" and "Deep Learning for Medical Imaging" in Department of Biomedical Engineering, covering MRI and Medical Imaging for post-graduate students.</p>
+                    </div>
+                </div>
 
-	    <p>
-	    Below is a selection of recent papers from my full list of approximately 100 peer reviewed journal articles.
-	    </p>
-            <a href="https://scholar.google.com/citations?hl=en&user=uWxO67gAAAAJ&view_op=list_works&sortby=pubdate">View all publications →</a>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">Scientific Advising</h3>
+                        <p>I serve as a Scientific Advisor for the <a href="https://www.cameramriafrica.org/spark">SPrint AI training for AfRican medical imaging Knowledge translation (SPARK)</a> which is part of <a href="https://www.cameramriafrica.org">CAMERA</a> program to build expertise to enable Africa to use MRI to realize their healthcare needs. I teach several modules in the SPARK program including Medical Image Processing, UNet Segmentation, Deep Learning, and How to Write a Paper.</p>
+                    </div>
+                </div>
 
-	    <h3>Recent Ophthalmology Publications</h3>
-	    <ol style="margin-left: 3em;">
-		  <li>Wang Y, Peng J, Dai Y, <strong>Jones C</strong>, Sair S, Shen J, Loizou N, Wu J, Hsu WC, Imami M, Yang L, Jiao Z, Zhang P, Bai H, "Enhancing vision-language models for medical imaging: bridging the 3D gap with innovative slice selection", NeurIPS D&B Track 2024.</li>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">Reviewer</h3>
+                        <p>Recent conferences and journals I have reviewed for include: British Journal of Ophthalmology; Computer Methods and Programs in Biomedicine; Artificial Intelligence in Medicine; Engineering; JAMA Ophthalmology; PlosOne; Physica Scripta, Ophthalmology Retina; MICCAI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		  <li>TYA Liu, Y Liu, MS Gastonguay, D Midgett, N Kuo, Y Zhao, K Ullah, G Alexander, T Hartman, ND Koseoglu, <strong>C Jones</strong>, "Predicting Imminent Conversion to Exudative Age-related Macular Degeneration Using Multimodal Data and Ensemble Machine Learning", Ophthalmology Science. 2025. In Press. doi: https://doi.org/10.1016/j.xops.2025.100785</li>
+        <!-- Education Section -->
+        <section id="education" class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-primary-custom">Education & Training</h2>
 
-		  <li>Cornelio A, Martinez AC, Lu H, <strong>Jones C</strong>, Kashani AH, "Rigid alignment method for secondary analyses of optical coherence tomography volumes", Biomed. Opt. Express 15, 938-952 (2024) https://doi.org/10.1364/BOE.508123.</li>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">Postdoctoral Research Fellowship</h3>
+                        <p class="fw-bold text-secondary-custom">F.M. Kirby Center, Kennedy Krieger Institute, Johns Hopkins University — 2003 - 2006</p>
+                        <p>Focus: My research centered on developing advanced quantitative MRI techniques for neurological applications, particularly focusing on novel contrast mechanisms like amide proton transfer (APT) imaging for brain tumors and magnetization transfer methods for spinal cord assessment. I applied early machine learning approaches to image processing challenges, including automated registration techniques and clustering algorithms for tissue classification, which established the foundation for my later work combining artificial intelligence with medical imaging.</p>
+                    </div>
+                </div>
 
-		  <li>Liu TYA, Koseoglu ND, <strong>Jones CK</strong>, "Self-Supervised Deep Learning—The Next Frontier", JAMA Ophthalmol. Published online February 8, 2024. doi:10.1001/jamaophthalmol.2023.6650.</li>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">Ph.D. in Physics (Medical Biophysics)</h3>
+                        <p class="fw-bold text-secondary-custom">University of British Columbia — 1999 - 2003</p>
+                        <p>Thesis: T2 Decay Curve Acquisition and Analysis in MRI: Noise Considerations, Short T2, and B1 Field Encoding</p>
+                        <p>Advisor: Prof. Alex Mackay and San Xang</p>
+                    </div>
+                </div>
 
-		  <li>Wu J, Koseoglu ND, <strong>Jones CK</strong>, Liu TYA. "Vision transformers: The next frontier for deep learning-based ophthalmic image analysis", Saudi Journal of Ophthalmology:, July 14, 2023. | DOI: 10.4103/sjopt.sjopt_91_23.</li>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">M.S. in Medical Biophysics</h3>
+                        <p class="fw-bold text-secondary-custom">University of Western Ontario — 1994 - 1997</p>
+                        <p>Thesis: Quantitative Multi-Component Analysis Using Fast Spin-Echo MRI</p>
+                    </div>
+                </div>
 
-		  <li><strong>Jones CK</strong>, Li B, Wu JH, Nakaguchi T, Xuan P, Liu TYA. "Comparative analysis of alignment algorithms for macular optical coherence tomography imaging", Int J Retin Vitr 2023;9(60) 2023, https://doi.org/10.1186/s40942-023-00497-2.</li>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-secondary-custom">B.Sc. (Honours) in Mathematics and Computing Science (First Class Standing)</h3>
+                        <p class="fw-bold text-secondary-custom">Simon Fraser University — 1988 - 1992</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		  <li>Kashani AH, Liu TYA, <strong>Jones CK</strong>. "Optical Coherence Tomography Angiography, Artificial Intelligence, and the Missing Capillaries", JAMA Ophthalmol. Published online May 25, 2023. doi:10.1001/jamaophthalmol.2023.1829.</li>
+        <!-- Publications Section -->
+        <section id="publications" class="py-5 bg-light-custom">
+            <div class="container">
+                <h2 class="section-heading text-primary-custom">Selected Publications</h2>
+                <p>Below is a selection of recent papers from my full list of approximately 100 peer reviewed journal articles.</p>
+                <p class="mb-4">
+                    <a href="https://scholar.google.com/citations?hl=en&user=uWxO67gAAAAJ&view_op=list_works&sortby=pubdate" class="btn btn-outline-primary">View all publications →</a>
+                </p>
 
-		  <li>Liu Y, Ota M, Han R, Siewerdsen J, Liu TYA, <strong>Jones CK</strong>, "Active Shape Model Registration of Ocular Structures in Computed Tomography Images." Physics in Medicine and Biology, 2022 (https://doi.org/10.1088/1361-6560/ac9a98).</li>
+                <h3 class="text-secondary-custom mt-4">Recent Ophthalmology Publications</h3>
+                <ol class="mt-3">
+                    <li>Wang Y, Peng J, Dai Y, <strong>Jones C</strong>, Sair S, Shen J, Loizou N, Wu J, Hsu WC, Imami M, Yang L, Jiao Z, Zhang P, Bai H, "Enhancing vision-language models for medical imaging: bridging the 3D gap with innovative slice selection", NeurIPS D&B Track 2024.</li>
 
-		  <li>Liu TY, Ling C, Hahn L, <strong>Jones CK</strong>, Boon C, Singh M. "Prediction of Visual Impairment in Retinitis Pigmentosa Using Deep Learning and Multimodal Fundus Images". British Journal of Ophthalmology, 2022. (http://dx.doi.org/10.1136/bjo-2021-320897).</li>
-	</ol>
+                    <li>TYA Liu, Y Liu, MS Gastonguay, D Midgett, N Kuo, Y Zhao, K Ullah, G Alexander, T Hartman, ND Koseoglu, <strong>C Jones</strong>, "Predicting Imminent Conversion to Exudative Age-related Macular Degeneration Using Multimodal Data and Ensemble Machine Learning", Ophthalmology Science. 2025. In Press. doi: https://doi.org/10.1016/j.xops.2025.100785</li>
 
-	    <h3>Recent Uncertainty, Active Learning, and Federated  Learning Publications</h3>
-	    <ol style="margin-left: 3em;">
-	  <li>Kim DD, Chandra RS, Yang L, Wu J, Feng X, Atalay M, Bettegowda C, <strong>Jones C</strong>, Sair H, Liao WH, Zhu C, Zou B, Kazerooni AF, Nabavizadeh A, Jiao Z, Peng J, Bai HX, "Active Learning in Brain Tumor Segmentation with Uncertainty Sampling and Annotation Redundancy Restriction", J Imaging Inform Med. 2024 Oct;37(5):2099-2107. doi: 10.1007/s10278-024-01037-6.</li>
+                    <li>Cornelio A, Martinez AC, Lu H, <strong>Jones C</strong>, Kashani AH, "Rigid alignment method for secondary analyses of optical coherence tomography volumes", Biomed. Opt. Express 15, 938-952 (2024) https://doi.org/10.1364/BOE.508123.</li>
 
-	  <li>Liu SZ, Vagdargi P, <strong>Jones CK</strong>, Luciano M, Anderson WS, Helm PA, Uneri A, Siewerdsen JH, Zbijewski W, and Sisniega A, "One-shot estimation of epistemic uncertainty in deep learning image formation with application to high-quality cone-beam CT reconstruction", SPIE 2024.</li>
+                    <li>Liu TYA, Koseoglu ND, <strong>Jones CK</strong>, "Self-Supervised Deep Learning—The Next Frontier", JAMA Ophthalmol. Published online February 8, 2024. doi:10.1001/jamaophthalmol.2023.6650.</li>
 
-	  <li>Duan R, Caffo B, Bai H, Sair HI, <strong>Jones CK</strong>. "Evidential Uncertainty Quantification: A Variance-Based Perspective." Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2024.</li>
+                    <li>Wu J, Koseoglu ND, <strong>Jones CK</strong>, Liu TYA. "Vision transformers: The next frontier for deep learning-based ophthalmic image analysis", Saudi Journal of Ophthalmology:, July 14, 2023. | DOI: 10.4103/sjopt.sjopt_91_23.</li>
 
-	  <li>Yi M, Duan R, Li Z, Siewerdsen JH, Uneri A, Lee J, <strong>Jones CK</strong>. "Joint synthesis and registration of MRI and Cone-Beam CT Images using deep evidential uncertainty estimation of deformation fields." Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 129280X (2024) https://doi.org/10.1117/12.3008899.</li>
+                    <li><strong>Jones CK</strong>, Li B, Wu JH, Nakaguchi T, Xuan P, Liu TYA. "Comparative analysis of alignment algorithms for macular optical coherence tomography imaging", Int J Retin Vitr 2023;9(60) 2023, https://doi.org/10.1186/s40942-023-00497-2.</li>
 
-	  <li>Pati S, …. <strong>Jones CK</strong>, …., Bakas S., "Federated Learning Enables Big Data for Rare Cancer Boundary Detection", Nature Communications, 2022 Dec 5;13(1):7346. doi: 10.1038/s41467-022-33407-5.</li>
+                    <li>Kashani AH, Liu TYA, <strong>Jones CK</strong>. "Optical Coherence Tomography Angiography, Artificial Intelligence, and the Missing Capillaries", JAMA Ophthalmol. Published online May 25, 2023. doi:10.1001/jamaophthalmol.2023.1829.</li>
 
-	  <li><strong>Jones CK</strong>, Wang G, Yedavalli V, Sair H. "Quantifying Epistemic and Aleatoric Uncertainty in 3D U-Net Segmentation". Journal of Medical Imaging 9(3), 034002, 2022. (http://dx.doi.org/10.1117/1.JMI.9.3.034002).</li>
+                    <li>Liu Y, Ota M, Han R, Siewerdsen J, Liu TYA, <strong>Jones CK</strong>, "Active Shape Model Registration of Ocular Structures in Computed Tomography Images." Physics in Medicine and Biology, 2022 (https://doi.org/10.1088/1361-6560/ac9a98).</li>
 
-	  <li>Zhang X, Sisniega A, Zbijewski WB, Lee J, <strong>Jones CK</strong>, Wu P, Han R, Uneri A, Vagdargi P, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Combining physics-based models with deep learning image synthesis and uncertainty in intraoperative cone-beam CT of the brain", Medical Physics 50(5) p. 2607-2624.</li>
-	</ol>
+                    <li>Liu TY, Ling C, Hahn L, <strong>Jones CK</strong>, Boon C, Singh M. "Prediction of Visual Impairment in Retinitis Pigmentosa Using Deep Learning and Multimodal Fundus Images". British Journal of Ophthalmology, 2022. (http://dx.doi.org/10.1136/bjo-2021-320897).</li>
+                </ol>
 
-	    <h3>Recent Deep Learning Publications</h3>
-	    <ol style="margin-left: 3em;">
-  <li>P Vagdargi, A Uneri, SZ Liu, <strong>CK Jones</strong>, A Sisniega, J Lee, PA Helm, RP Lee, MG Luciano, GD Hager, JH Siewerdsen "Self-Supervised Feature Detection and 3D Reconstruction for Real-Time Neuroendoscopic Guidance", IEEE Transactions in Biomedical Engineering (in press).</li>
-  
-  <li>Latheef AAP, Santamaria-Pang A, <strong>Jones CK</strong>, Sair HI, "Emergent Language Symbolic Autoencoder (ELSA) with Weak Supervision to Model Hierarchical Brain Networks", arXiv:2404.10031, MICCAI 2024.</li>
-  
-  <li>Hu Y, Huang Y, Song A, <strong>Jones CK</strong>, Siewerdsen JH, Basar B, Helm PA, Uneri A, "Probe positioning for robot-assisted intraoperative ultrasound imaging using deep reinforcement learning", Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 1292803 (2024) https://doi.org/10.1117/12.3006918.</li>
-  
-  <li>Vagdargi P, Uneri A, Liu S, <strong>Jones CK</strong>, Sisniega A, Lee J, Helm PA, Anderson WS, Luciano M, Hager GD, Siewerdsen JH, "End-to-end 3D neuroendoscopic video reconstruction for robot-assisted ventriculostomy", Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 129280M (2024) https://doi.org/10.1117/12.3008758.</li>
-  
-  <li>Kambli H, Santamaria-Pang A, Tarapov I, Beheshtian E, Luna L, Sair HI, <strong>Jones C</strong>, "Atlas-Based Labeling of Resting-State fMRI", Brain Connectivity, Published Online: 30 May 2024, https://doi.org/10.1089/brain.2023.0080.</li>
-  
-  <li>Wang Y, Peng J, Dai Y, <strong>Jones C</strong>, Sair S, Shen J, Loizou N, Wu J, Hsu WC, Imami M, Yang L, Jiao Z, Zhang P, Bai H, "Enhancing vision-language models for medical imaging: bridging the 3D gap with innovative slice selection", NeurIPS D&B Track 2024.</li>
-  
-  <li>Ghate S, Santamaria-Pang A, Tarapov I, Sair HI, <strong>Jones CK</strong>. "Deep Labeling of fMRI Brain Networks Using Cloud Based Processing".17th International Symposium on Visual Computing (ISVC 2022).</li>
-  
-  <li>Han R, <strong>Jones CK</strong>, Lee J, Wu P, Vagdargi P, Uneri A, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Deformable MR-CT Image Registration Using an Unsupervised, Dual-Channel Network for Neurosurgical Guidance." Medical Image Analysis, 2021 Med Image Anal. 2022 Jan;75:102292. DOI: https://doi.org/10.1016/j.media.2021.102292</li>
-  
-  <li>Han R, <strong>Jones C.K</strong>, Ketch M, Wu P, Vagdargi P, Uneri A, Lee J, Luciano M, Anderson WS, Siewerdsen JH, "Deformable MR-CT image registration using an unsupervised end-to-end synthesis and registration network for endoscopic neurosurgery." Proc. SPIE 11598, Medical Imaging 2021: Image-Guided Procedures, Robotic Interventions, and Modeling, 1159819</li>
-  
-  <li>Han R, <strong>Jones CK</strong>, Wu P, Vagdargi P, Zhang X, Uneri A, Lee J, Luciano M, Anderson WS, Siewerdsen JH, "Deformable Registration of MRI to Intraoperative Cone-Beam CT of the Brain Using a Joint Synthesis and Registration Network." SPIE Medical Imaging 2022.</li>
-  
-  <li>Han R, <strong>Jones CK</strong>, Lee J, Zhang X, Wu P, Vagdargi P, Uneri A, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Joint Synthesis and Registration Network for Deformable MR-CBCT Image Registration for Neurosurgical Guidance", Physics in Medicine and Biology v67, 2022.</li>
-  
-  <li>Huang Y, <strong>Jones CK</strong>, Zhang X, Johnston A, Waktola S, Aygun N, Witham TF, Bydon A, Theodore N, Helm PA, Siewerdsen JH, Uneri A. "Multi-perspective region-based CNNs for vertebrae labeling in intraoperative long-length images." Computer Methods and Programs in Biomedicine, Volume 227, December 2022. https://doi.org/10.1016/j.cmpb.2022.107222</li>
-  
-  <li>Huang Y, <strong>Jones CK</strong>, Zhang X, Johnston A, Waktola S, Aygun N, Witham TF, Bydon A, Theodore N, Helm PA, Siewerdsen JH, Uneri A. "Multi-Perspective Region-Based CNNs for Vertebrae Labeling in Intraoperative Long-Length Images." Proceedings Volume 12034, Medical Imaging 2022: Image-Guided Procedures, Robotic Interventions, and Modeling; 120340U (2022) https://doi.org/10.1117/12.2611912</li>
-	</ol>
+                <h3 class="text-secondary-custom mt-4">Recent Uncertainty, Active Learning, and Federated Learning Publications</h3>
+                <ol class="mt-3">
+                    <li>Kim DD, Chandra RS, Yang L, Wu J, Feng X, Atalay M, Bettegowda C, <strong>Jones C</strong>, Sair H, Liao WH, Zhu C, Zou B, Kazerooni AF, Nabavizadeh A, Jiao Z, Peng J, Bai HX, "Active Learning in Brain Tumor Segmentation with Uncertainty Sampling and Annotation Redundancy Restriction", J Imaging Inform Med. 2024 Oct;37(5):2099-2107. doi: 10.1007/s10278-024-01037-6.</li>
 
+                    <li>Liu SZ, Vagdargi P, <strong>Jones CK</strong>, Luciano M, Anderson WS, Helm PA, Uneri A, Siewerdsen JH, Zbijewski W, and Sisniega A, "One-shot estimation of epistemic uncertainty in deep learning image formation with application to high-quality cone-beam CT reconstruction", SPIE 2024.</li>
+
+                    <li>Duan R, Caffo B, Bai H, Sair HI, <strong>Jones CK</strong>. "Evidential Uncertainty Quantification: A Variance-Based Perspective." Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2024.</li>
+
+                    <li>Yi M, Duan R, Li Z, Siewerdsen JH, Uneri A, Lee J, <strong>Jones CK</strong>. "Joint synthesis and registration of MRI and Cone-Beam CT Images using deep evidential uncertainty estimation of deformation fields." Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 129280X (2024) https://doi.org/10.1117/12.3008899.</li>
+
+                    <li>Pati S, …. <strong>Jones CK</strong>, …., Bakas S., "Federated Learning Enables Big Data for Rare Cancer Boundary Detection", Nature Communications, 2022 Dec 5;13(1):7346. doi: 10.1038/s41467-022-33407-5.</li>
+
+                    <li><strong>Jones CK</strong>, Wang G, Yedavalli V, Sair H. "Quantifying Epistemic and Aleatoric Uncertainty in 3D U-Net Segmentation". Journal of Medical Imaging 9(3), 034002, 2022. (http://dx.doi.org/10.1117/1.JMI.9.3.034002).</li>
+
+                    <li>Zhang X, Sisniega A, Zbijewski WB, Lee J, <strong>Jones CK</strong>, Wu P, Han R, Uneri A, Vagdargi P, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Combining physics-based models with deep learning image synthesis and uncertainty in intraoperative cone-beam CT of the brain", Medical Physics 50(5) p. 2607-2624.</li>
+                </ol>
+<h3 class="text-secondary-custom mt-4">Recent Deep Learning Publications</h3>
+<ol class="mt-3">
+    <li>P Vagdargi, A Uneri, SZ Liu, <strong>CK Jones</strong>, A Sisniega, J Lee, PA Helm, RP Lee, MG Luciano, GD Hager, JH Siewerdsen "Self-Supervised Feature Detection and 3D Reconstruction for Real-Time Neuroendoscopic Guidance", IEEE Transactions in Biomedical Engineering (in press).</li>
+    
+    <li>Latheef AAP, Santamaria-Pang A, <strong>Jones CK</strong>, Sair HI, "Emergent Language Symbolic Autoencoder (ELSA) with Weak Supervision to Model Hierarchical Brain Networks", arXiv:2404.10031, MICCAI 2024.</li>
+    
+    <li>Hu Y, Huang Y, Song A, <strong>Jones CK</strong>, Siewerdsen JH, Basar B, Helm PA, Uneri A, "Probe positioning for robot-assisted intraoperative ultrasound imaging using deep reinforcement learning", Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 1292803 (2024) https://doi.org/10.1117/12.3006918.</li>
+    
+    <li>Vagdargi P, Uneri A, Liu S, <strong>Jones CK</strong>, Sisniega A, Lee J, Helm PA, Anderson WS, Luciano M, Hager GD, Siewerdsen JH, "End-to-end 3D neuroendoscopic video reconstruction for robot-assisted ventriculostomy", Proceedings Volume 12928, Medical Imaging 2024: Image-Guided Procedures, Robotic Interventions, and Modeling; 129280M (2024) https://doi.org/10.1117/12.3008758.</li>
+    
+    <li>Kambli H, Santamaria-Pang A, Tarapov I, Beheshtian E, Luna L, Sair HI, <strong>Jones C</strong>, "Atlas-Based Labeling of Resting-State fMRI", Brain Connectivity, Published Online: 30 May 2024, https://doi.org/10.1089/brain.2023.0080.</li>
+    
+    <li>Wang Y, Peng J, Dai Y, <strong>Jones C</strong>, Sair S, Shen J, Loizou N, Wu J, Hsu WC, Imami M, Yang L, Jiao Z, Zhang P, Bai H, "Enhancing vision-language models for medical imaging: bridging the 3D gap with innovative slice selection", NeurIPS D&B Track 2024.</li>
+    
+    <li>Ghate S, Santamaria-Pang A, Tarapov I, Sair HI, <strong>Jones CK</strong>. "Deep Labeling of fMRI Brain Networks Using Cloud Based Processing".17th International Symposium on Visual Computing (ISVC 2022).</li>
+    
+    <li>Han R, <strong>Jones CK</strong>, Lee J, Wu P, Vagdargi P, Uneri A, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Deformable MR-CT Image Registration Using an Unsupervised, Dual-Channel Network for Neurosurgical Guidance." Medical Image Analysis, 2021 Med Image Anal. 2022 Jan;75:102292. DOI: https://doi.org/10.1016/j.media.2021.102292</li>
+    
+    <li>Han R, <strong>Jones C.K</strong>, Ketch M, Wu P, Vagdargi P, Uneri A, Lee J, Luciano M, Anderson WS, Siewerdsen JH, "Deformable MR-CT image registration using an unsupervised end-to-end synthesis and registration network for endoscopic neurosurgery." Proc. SPIE 11598, Medical Imaging 2021: Image-Guided Procedures, Robotic Interventions, and Modeling, 1159819</li>
+    
+    <li>Han R, <strong>Jones CK</strong>, Wu P, Vagdargi P, Zhang X, Uneri A, Lee J, Luciano M, Anderson WS, Siewerdsen JH, "Deformable Registration of MRI to Intraoperative Cone-Beam CT of the Brain Using a Joint Synthesis and Registration Network." SPIE Medical Imaging 2022.</li>
+    
+    <li>Han R, <strong>Jones CK</strong>, Lee J, Zhang X, Wu P, Vagdargi P, Uneri A, Helm PA, Luciano M, Anderson WS, Siewerdsen JH. "Joint Synthesis and Registration Network for Deformable MR-CBCT Image Registration for Neurosurgical Guidance", Physics in Medicine and Biology v67, 2022.</li>
+    
+    <li>Huang Y, <strong>Jones CK</strong>, Zhang X, Johnston A, Waktola S, Aygun N, Witham TF, Bydon A, Theodore N, Helm PA, Siewerdsen JH, Uneri A. "Multi-perspective region-based CNNs for vertebrae labeling in intraoperative long-length images." Computer Methods and Programs in Biomedicine, Volume 227, December 2022. https://doi.org/10.1016/j.cmpb.2022.107222</li>
+    
+    <li>Huang Y, <strong>Jones CK</strong>, Zhang X, Johnston A, Waktola S, Aygun N, Witham TF, Bydon A, Theodore N, Helm PA, Siewerdsen JH, Uneri A. "Multi-Perspective Region-Based CNNs for Vertebrae Labeling in Intraoperative Long-Length Images." Proceedings Volume 12034, Medical Imaging 2022: Image-Guided Procedures, Robotic Interventions, and Modeling; 120340U (2022) https://doi.org/10.1117/12.2611912</li>
+</ol>
+            </div>
         </section>
     </main>
 
-    <footer id="contact">
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-primary-custom text-white text-center py-4 mt-5">
         <div class="container">
-            <h2>Contact</h2>
+            <h2 class="mb-3">Contact</h2>
             <div class="contact-info">
-                <p>Craig Jones, PhD</p>
+                <p class="mb-1">Craig Jones, PhD</p>
                 <p>Email: craig@imagingai.org</p>
             </div>
         </div>
     </footer>
+
+    <!-- Additional Footer -->
+    <div class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">Craig Jones, PhD (craig@imagingai.org)</p>
+        </div>
+    </div>
 </body>
 </html>
