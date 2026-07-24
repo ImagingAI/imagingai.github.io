@@ -1,0 +1,9 @@
+title: Imaging AI Lab
+description: Medical imaging, deep learning, AI modeling, and computer vision research
+url: ""
+baseurl: ""
+
+# If this repo is NOT served from a custom domain (i.e. it's username.github.io/repo-name),
+# set baseurl to "/repo-name" instead of "" above.
+
+markdown: kramdown

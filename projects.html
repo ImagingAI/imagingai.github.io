@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Projects"
+nav: projects
+---
+<section class="py-5" id="projects">
+<div class="container">
+<h2 class="section-heading text-primary-custom">Featured Projects</h2>
+<div class="row g-4">
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Vascular Malformation Segmentation" class="project-img card-img-top p-3" src="{{ '/images/vms.png' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Vascular Malformation Segmentation</h3>
+<p class="card-text">We are developing a fully automated algorithm to segment Low-Flow Vascular Malformations (LFVMs) on MRI scans as a critical step toward building disease progression and treatment prediction models. The work utilizes retrospective MRI data from 200 subjects with LFVMs in various body regions, employing a modified nnUNet deep learning segmentation model with comprehensive data augmentation techniques.</p>
+<p class="card-text">Future work will expand this segmentation approach to additional body regions and integrate radiomics analysis to build comprehensive prediction models for LFVM treatment outcomes.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Active Shape Modeling" class="project-img card-img-top p-3" src="{{ '/images/eye3.png' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Active Shape Modeling</h3>
+<p class="card-text">Our active shape model research develops automated registration methods for ocular structures in CT images using point distribution models that can precisely locate and outline eye components despite image quality variations. This work addresses critical challenges in ophthalmology and radiation therapy treatment planning by providing accurate anatomical structure identification even when abnormalities are present.</p>
+<p class="card-text">Future work will incorporate deep learning for improved feature detection, extend the model to handle pathological deformations, create multi-modal registration frameworks, and develop clinical decision support systems leveraging these models for treatment planning.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Uncertainty in AI" class="project-img card-img-top p-3" src="{{ '/images/uncertainty2.png' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Aleatoric and Epistemic Uncertainty for AI</h3>
+<p class="card-text">Our research tackles the critical challenge of uncertainty quantification in medical image segmentation by developing innovative methods to distinguish between epistemic uncertainty (model limitations) and aleatoric uncertainty (inherent data randomness) in 3D U-Net architectures. We extended the evidential deep learning and created a framework that generates uncertainty maps alongside segmentations, highlighting areas where AI predictions may be unreliable and requiring human expert attention—a crucial capability for clinical integration.</p>
+<p class="card-text">Future work will focus on expanding this framework to other medical imaging applications, integrating model ensembles for improved uncertainty estimation, and developing adaptive systems that can request human intervention based on quantified uncertainty thresholds.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Active Learning in AI" class="project-img card-img-top p-3" src="{{ '/images/active-learning.png' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Active Learning in AI</h3>
+<p class="card-text">Our work introduces a novel framework for uncertainty quantification in deep learning that mathematically connects evidential learning with Bayesian neural networks through a direct variance parameterization approach. We demonstrate that our method effectively captures both epistemic uncertainty (model uncertainty) and aleatoric uncertainty (data uncertainty) without requiring computationally expensive Monte Carlo sampling at inference time. Extensive experiments on medical image segmentation and classification tasks show that our approach provides more accurate uncertainty estimates while maintaining computational efficiency compared to existing methods.</p>
+<p class="card-text">Future work will extend this framework to more complex architectures, explore applications in active learning and out-of-distribution detection, and develop interpretable visualization tools that help clinicians understand model confidence in medical decision-making contexts.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Multimodal Data in AMD" class="project-img card-img-top p-3" src="{{ '/images/optho-multi-modal.jpg' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Multimodal Data and Ensemble Machine Learning in AMD</h3>
+<p class="card-text">This research develops an ensemble machine learning approach combining multiple algorithms (random forests, gradient boosting, and neural networks) to predict the 6-month conversion risk from intermediate to exudative age-related macular degeneration using multimodal data. The methodology integrates features from optical coherence tomography, fundus photography, and patient demographics through a feature selection process that identifies the most predictive biomarkers across modalities. The ensemble model significantly outperforming individual models and conventional clinical assessments, while maintaining interpretability through feature importance analysis that highlighted novel biomarkers beyond traditional risk factors.</p>
+<p class="card-text">Future work will continue to focus on incorporating multi-modal AI for more robust and accurate predictions, along with uncertainty techniques to provide a more complete picture of prediction and its associated confidence.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card project-card shadow-sm h-100">
+<img alt="Emergent Language AI" class="project-img card-img-top p-3" src="{{ '/images/elsa.png' | relative_url }}"/>
+<div class="card-body">
+<h3 class="card-title text-secondary-custom fs-5">Emergent Language AI for Hierarchical fMRI ICA</h3>
+<p class="card-text">In our research, we developed a novel symbolic autoencoder (ELSA) with weak supervision that effectively models the hierarchical organization of brain networks, overcoming the "black box" limitations of traditional flat classifiers. We implemented a generalized hierarchical loss function that ensures both our symbolic sentences and generated images accurately reflect the hierarchical structure of functional brain networks, enabling comprehensive analysis from broad perspectives to granular details.</p>
+<p class="card-text">Future work will extend this approach to dynamic functional connectivity analysis, incorporating temporal dimensions to model how these hierarchical brain networks evolve over time and in response to various cognitive tasks or pathological conditions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
